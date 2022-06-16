@@ -1,0 +1,72 @@
+
+<div class="container">
+  <h1>Taxi Meter Calculator</h1>
+  <form #taxiFareForm="ngForm" (ngSubmit)="calculateFare()">
+
+    <div class="form-group">
+
+      <label for="under6mph">Miles traveled under 6 MPH:</label>
+      <input id="under6mph" class="form-control col-sm-4" type="number" step=".2" placeholder="Miles traveled..."
+             [(ngModel)]="taxiRide.milesUnder6Mph" name="under6mph" required #under6mph="ngModel"
+             appMileageValidator />
+
+      <div *ngIf="(under6mph.dirty || under6mph.touched) && under6mph.errors?.mileageValid == false"
+           class="alert alert-danger col-sm-5">
+        Mileage must be in 1/5 mile increments
+      </div>
+
+      <div class="alert alert-danger col-sm-5" *ngIf="under6mph.errors?.required">
+        Mileage is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="over6mph">Minutes traveled over 6 MPH:</label>
+      <input id="over6mph" class="form-control col-sm-4" type="number" step="1" placeholder="Minutes traveled..."
+             [(ngModel)]="taxiRide.minutesOver6Mph" name="over6mph" required #over6mph="ngModel"
+             pattern="\d*" />
+
+      <div *ngIf="(over6mph.dirty || over6mph.touched) && over6mph.errors?.required"
+           class="alert alert-danger col-sm-5">
+        Minutes is required
+      </div>
+
+      <div *ngIf="over6mph.errors?.pattern"
+           class="alert alert-danger col-sm-5">
+        Minutes cannot include fractions
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfRide">Date of Ride:</label>
+      <input id="dateOfRide" class="form-control col-sm-4" type="date" placeholder="Date..."
+             [(ngModel)]="taxiRide.startDateOfRide" name="dateOfRide" #dateOfRide="ngModel" required />
+
+      <div [hidden]="dateOfRide.valid || dateOfRide.pristine"
+           class="alert alert-danger col-sm-5">
+        Date of Ride is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="startTimeOfRide">Start of Ride:</label>
+      <input id="startTimeOfRide" class="form-control col-sm-4" type="time" placeholder="Date..."
+             [(ngModel)]="taxiRide.startTimeOfRide" name="startTimeOfRide" #startTimeOfRide="ngModel" required />
+
+      <div [hidden]="startTimeOfRide.valid || startTimeOfRide.pristine"
+           class="alert alert-danger col-sm-5">
+        Start Time of Ride is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <p><button class="btn btn-primary" id="submit" [disabled]="!taxiFareForm.form.valid">Calculate Fare</button></p>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="totalFare" class="form-group">
+  <h2><label id="fare">Your fare is: {{totalFare | currency}}</label></h2>
+</div>
+

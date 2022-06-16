@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiMeter.Common", "TaxiMeter.Common\TaxiMeter.Common.csproj", "{637BC389-A6B7-4E50-92B7-5CB16CB95E74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiMeter.Services", "TaxiMeter.Services\TaxiMeter.Services.csproj", "{95D63E92-36DE-4861-A3AD-BBC1A12B0B16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiMeter.UI", "TaxiMeter.UI\TaxiMeter.UI.csproj", "{16BAABF8-D09C-45D7-9BA9-F1751897B76D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiMeter.Services.Test", "TaxiMeter.ServicesTest\TaxiMeter.Services.Test.csproj", "{2F0D9092-4E4E-471A-9E45-41C676F1491E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{637BC389-A6B7-4E50-92B7-5CB16CB95E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637BC389-A6B7-4E50-92B7-5CB16CB95E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637BC389-A6B7-4E50-92B7-5CB16CB95E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637BC389-A6B7-4E50-92B7-5CB16CB95E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D63E92-36DE-4861-A3AD-BBC1A12B0B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D63E92-36DE-4861-A3AD-BBC1A12B0B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D63E92-36DE-4861-A3AD-BBC1A12B0B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D63E92-36DE-4861-A3AD-BBC1A12B0B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BAABF8-D09C-45D7-9BA9-F1751897B76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BAABF8-D09C-45D7-9BA9-F1751897B76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BAABF8-D09C-45D7-9BA9-F1751897B76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BAABF8-D09C-45D7-9BA9-F1751897B76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0D9092-4E4E-471A-9E45-41C676F1491E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0D9092-4E4E-471A-9E45-41C676F1491E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0D9092-4E4E-471A-9E45-41C676F1491E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0D9092-4E4E-471A-9E45-41C676F1491E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD5441AD-6B91-4888-A424-39D25AC286E0}
+	EndGlobalSection
+EndGlobal
